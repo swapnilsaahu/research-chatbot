@@ -25,6 +25,7 @@ export const askQuestion = async (req, res) => {
 export const getStatus = (req, res) => {
     const vectorStore = getVectorStore();
     res.json({
+        success: true,
         vectorStoreReady: vectorStore !== null,
         message: vectorStore ? 'Ready to answer questions' : 'No PDFs processed yet'
     });
